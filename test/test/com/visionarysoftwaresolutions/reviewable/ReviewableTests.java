@@ -1,14 +1,15 @@
 package com.visionarysoftwaresolutions.reviewable;
 
+import com.visionarysoftwaresolutions.reviewable.stubs.*;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class ReviewableTests {
+    Reviewer nick = new User("nick");
+    Reviewable food = new Food("Phonecian Cafe Hummus");
+    
     @Test
     public void testReview() {
-        //Given I have a Reviewer and a Reviewable
-        Reviewer nick = new User("nick");
-        Reviewable food = new Food("Phonecian Cafe Hummus");
         //When I have the Reviewer review the Reviewable
         Review result = nick.review(food, 
                 "It is so creamy and delicious!");
@@ -20,9 +21,6 @@ public class ReviewableTests {
     
     @Test
     public void testRatedReview(){
-        //Given I have a Reviewer and a Reviewable
-        Reviewer nick = new User("nick");
-        Reviewable food = new Food("Phonecian Cafe Hummus");
         //When I have the Reviewer rate the Reviewable
         RatedReview result = nick.rate(food, 
                 "It is so creamy and delicious!",
@@ -38,7 +36,19 @@ public class ReviewableTests {
     
     @Test
     public void testDatedReview(){
+        //Given I'm reviewing something today
         java.util.Date today = new java.util.Date();
-        fail("do something");
+        //When I have a reviewer rate a reviewable
+        RatedReview result = nick.rate(food, 
+                "It is so creamy and delicious!",
+                FiveStarRatingScale.five());
+        //And I want a Dated Review
+        DatedReview datedResult = new DatedReview(result);
+        //Then it is rated
+        assertEquals(datedResult.getReviewer(), nick);
+        assertEquals(datedResult.getReviewed(), food);
+        assertTrue(today.equals(datedResult.getDate()));
+        assertEquals("It is so creamy and delicious! on " + today, 
+                datedResult.getDescription());
     }
 }
