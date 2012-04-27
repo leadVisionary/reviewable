@@ -8,5 +8,6 @@ package com.visionarysoftwaresolutions.reviewable;
  * Scenario: A Reviewer creates a Review for a Reviewable, rating it on a RatingScale with a Description
  */
 public interface RatingScale {
-    public abstract String[] getScale();
+    public abstract String[] range();
+    public abstract Rating getRating();
 }

@@ -10,5 +10,5 @@ package com.visionarysoftwaresolutions.reviewable;
  */
 public interface Reviewer {
     public abstract Review review(Reviewable toReview, String description);
-    public abstract RatedReview rate(Reviewable toReview, RatingScale ratingScale, String description);
+    public abstract RatedReview rate(Reviewable toReview, String description, RatingScale scale);
 }
