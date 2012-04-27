@@ -1,4 +1,6 @@
-package com.visionarysoftwaresolutions.reviewable;
+package com.visionarysoftwaresolutions.reviewable.rating;
+
+import com.visionarysoftwaresolutions.reviewable.Review;
 
 /**
  *

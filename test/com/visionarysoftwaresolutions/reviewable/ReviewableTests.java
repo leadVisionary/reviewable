@@ -1,5 +1,7 @@
 package com.visionarysoftwaresolutions.reviewable;
 
+import com.visionarysoftwaresolutions.reviewable.rating.RatingScale;
+import com.visionarysoftwaresolutions.reviewable.rating.RatedReview;
 import com.visionarysoftwaresolutions.reviewable.stubs.*;
 import org.junit.Test;
 import static org.junit.Assert.*;

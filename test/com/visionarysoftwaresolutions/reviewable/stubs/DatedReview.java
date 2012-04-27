@@ -1,5 +1,5 @@
 package com.visionarysoftwaresolutions.reviewable.stubs;
-import com.visionarysoftwaresolutions.reviewable.RatedReview;
+import com.visionarysoftwaresolutions.reviewable.rating.RatedReview;
 import com.visionarysoftwaresolutions.reviewable.ReviewDecorator;
 import java.util.Date;
 

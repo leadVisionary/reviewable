@@ -1,5 +1,8 @@
 package com.visionarysoftwaresolutions.reviewable;
 
+import com.visionarysoftwaresolutions.reviewable.rating.RatingScale;
+import com.visionarysoftwaresolutions.reviewable.rating.RatedReview;
+
 /**
  *
  * @author Nicholas Vaidyanathan, Lead Visionary of Visionary Software Solutions

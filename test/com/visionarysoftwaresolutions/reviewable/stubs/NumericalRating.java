@@ -1,7 +1,7 @@
 package com.visionarysoftwaresolutions.reviewable.stubs;
 
-import com.visionarysoftwaresolutions.reviewable.Rating;
-import com.visionarysoftwaresolutions.reviewable.RatingScale;
+import com.visionarysoftwaresolutions.reviewable.rating.Rating;
+import com.visionarysoftwaresolutions.reviewable.rating.RatingScale;
 
 public class NumericalRating implements Rating {
     private RatingScale scale;
