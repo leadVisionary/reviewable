@@ -6,7 +6,7 @@ import com.visionarysoftwaresolutions.reviewable.stubs.*;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-public class ReviewableTests {
+public class ReviewableTest {
     Reviewer nick = new User("nick");
     Reviewable food = new Food("Phonecian Cafe Hummus");
     
@@ -49,7 +49,7 @@ public class ReviewableTests {
         //Then it is rated
         assertEquals(datedResult.getReviewer(), nick);
         assertEquals(datedResult.getReviewed(), food);
-        assertTrue(today.equals(datedResult.getDate()));
+        assertEquals(today.compareTo(datedResult.getDate()),-1);
         assertEquals("It is so creamy and delicious! on " + today, 
                 datedResult.getDescription());
     }
