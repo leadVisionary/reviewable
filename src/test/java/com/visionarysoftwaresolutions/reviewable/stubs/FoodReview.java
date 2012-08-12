@@ -4,12 +4,12 @@ import com.visionarysoftwaresolutions.reviewable.Review;
 import com.visionarysoftwaresolutions.reviewable.Reviewable;
 import com.visionarysoftwaresolutions.reviewable.Reviewer;
 
-public abstract class FoodReview implements Review {
-    private String description;
-    private Reviewer reviewer;
-    private Reviewable reviewed;
+public final class FoodReview implements Review {
+    private final String description;
+    private final Reviewer reviewer;
+    private final Reviewable reviewed;
     
-    public FoodReview(Reviewer reviewer, Reviewable reviewed, String description){
+    FoodReview(Reviewer reviewer, Reviewable reviewed, String description){
         this.reviewer = reviewer;
         this.reviewed = reviewed;
         this.description = description;

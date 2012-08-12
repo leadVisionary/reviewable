@@ -13,6 +13,6 @@ public class User implements Reviewer {
 
     @Override
     public Review review(Reviewable toReview, String description) {
-        return new BasicFoodReview(this, toReview, description);
+        return new StubReviewFactory().create(this, toReview, description);
     }
 }

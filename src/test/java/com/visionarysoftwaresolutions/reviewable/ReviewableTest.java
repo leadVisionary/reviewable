@@ -21,7 +21,7 @@ public class ReviewableTest {
     
     
     @Test
-    public void testDatedReview(){
+    public void testReviewDecorator(){
         //Given I'm reviewing something today
         java.util.Date today = new java.util.Date();
         //When I have a reviewer rate a reviewable
@@ -32,8 +32,13 @@ public class ReviewableTest {
         //Then it is rated
         assertEquals(datedResult.getReviewer(), nick);
         assertEquals(datedResult.getReviewed(), food);
-        assertEquals(today.compareTo(datedResult.getDate()),-1);
+        assertEquals(-1, today.compareTo(datedResult.getDate()));
         assertEquals("It is so creamy and delicious! on " + today, 
                 datedResult.getDescription());
+    }
+    
+    @Test
+    public void testReviewFactory(){
+    	assertNotNull(new StubReviewFactory().create(nick, food, "can be created!"));
     }
 }
