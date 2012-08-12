@@ -1,7 +1,5 @@
 package com.visionarysoftwaresolutions.reviewable;
 
-import com.visionarysoftwaresolutions.reviewable.rating.RatingScale;
-import com.visionarysoftwaresolutions.reviewable.rating.RatedReview;
 
 /**
  *
@@ -13,5 +11,4 @@ import com.visionarysoftwaresolutions.reviewable.rating.RatedReview;
  */
 public interface Reviewer {
     public abstract Review review(Reviewable toReview, String description);
-    public abstract RatedReview rate(Reviewable toReview, String description, RatingScale scale);
 }

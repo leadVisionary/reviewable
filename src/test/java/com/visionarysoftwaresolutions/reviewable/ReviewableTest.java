@@ -1,5 +1,6 @@
 package com.visionarysoftwaresolutions.reviewable;
 
+import com.visionarysoftwaresolutions.reviewable.rating.Rater;
 import com.visionarysoftwaresolutions.reviewable.rating.RatingScale;
 import com.visionarysoftwaresolutions.reviewable.rating.RatedReview;
 import com.visionarysoftwaresolutions.reviewable.stubs.*;
@@ -7,7 +8,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class ReviewableTest {
-    Reviewer nick = new User("nick");
+    Rater nick = new User("nick");
     Reviewable food = new Food("Phonecian Cafe Hummus");
     
     @Test

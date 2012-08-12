@@ -1,12 +1,12 @@
 package com.visionarysoftwaresolutions.reviewable.stubs;
 
 import com.visionarysoftwaresolutions.reviewable.rating.RatedReview;
+import com.visionarysoftwaresolutions.reviewable.rating.Rater;
 import com.visionarysoftwaresolutions.reviewable.rating.RatingScale;
 import com.visionarysoftwaresolutions.reviewable.Review;
 import com.visionarysoftwaresolutions.reviewable.Reviewable;
-import com.visionarysoftwaresolutions.reviewable.Reviewer;
 
-public class User implements Reviewer {
+public class User implements Rater {
     private String name;
     
     public User(String string) {
