@@ -1,0 +1,37 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.visionarysoftwaresolutions</groupId>
+	<artifactId>reviewable</artifactId>
+	<packaging>jar</packaging>
+	<version>1.0</version>
+	<name>Reviewable</name>
+	<url>http://www.github.com/leadVisionary/reviewable</url>
+	<description>A simple library library for Reviewable entities. Defines semantics for Reviewers to be able to review Reviews </description>
+	<inceptionYear>April 2012</inceptionYear>
+	<organization>
+		<name>Visionary Software Solutions</name>
+		<url>http://www.visionarysoftwaresolutions.com</url>
+	</organization>
+	<scm>
+		<url>http://www.github.com/leadVisionary/reviewable</url>
+	</scm>
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.10</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+	<distributionManagement>
+		<repository>
+			<id>repo</id>
+			<url>https://github.com/leadVisionary/mvn-repo/raw/master/releases</url>
+		</repository>
+		<snapshotRepository>
+			<id>snapshot-repo</id>
+			<url>https://github.com/leadVisionary/mvn-repo/raw/master/snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
+</project>
