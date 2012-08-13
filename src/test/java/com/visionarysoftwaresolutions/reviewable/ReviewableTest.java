@@ -1,6 +1,5 @@
 package com.visionarysoftwaresolutions.reviewable;
 
-import com.visionarysoftwaresolutions.reviewable.stubs.*;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -22,18 +21,16 @@ public class ReviewableTest {
     
     @Test
     public void testReviewDecorator(){
-        //Given I'm reviewing something today
-        java.util.Date today = new java.util.Date();
         //When I have a reviewer rate a reviewable
         Review result = nick.review(food, 
                 "It is so creamy and delicious!");
         //And I want a Dated Review
         DatedReview datedResult = new DatedReview(result);
         //Then it is rated
-        assertEquals(datedResult.getReviewer(), nick);
-        assertEquals(datedResult.getReviewed(), food);
-        assertEquals(-1, today.compareTo(datedResult.getDate()));
-        assertEquals("It is so creamy and delicious! on " + today, 
+        assertEquals(nick, datedResult.getReviewer());
+        assertEquals(food, datedResult.getReviewed());
+        assertNotNull(datedResult.getDate());
+        assertEquals("It is so creamy and delicious! on " + datedResult.getDate(), 
                 datedResult.getDescription());
     }
     

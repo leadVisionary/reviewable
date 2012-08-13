@@ -4,7 +4,7 @@
 	<groupId>com.visionarysoftwaresolutions</groupId>
 	<artifactId>reviewable</artifactId>
 	<packaging>jar</packaging>
-	<version>1.0</version>
+	<version>1.1</version>
 	<name>Reviewable</name>
 	<url>http://www.github.com/leadVisionary/reviewable</url>
 	<description>A simple library library for Reviewable entities. Defines semantics for Reviewers to be able to review Reviews </description>

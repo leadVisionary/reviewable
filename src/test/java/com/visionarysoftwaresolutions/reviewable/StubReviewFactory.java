@@ -1,11 +1,11 @@
-package com.visionarysoftwaresolutions.reviewable.stubs;
+package com.visionarysoftwaresolutions.reviewable;
 
 import com.visionarysoftwaresolutions.reviewable.Review;
 import com.visionarysoftwaresolutions.reviewable.ReviewFactory;
 import com.visionarysoftwaresolutions.reviewable.Reviewable;
 import com.visionarysoftwaresolutions.reviewable.Reviewer;
 
-public class StubReviewFactory implements ReviewFactory {
+final class StubReviewFactory implements ReviewFactory {
 	private boolean wantsDate = true;
 	
 	@Override

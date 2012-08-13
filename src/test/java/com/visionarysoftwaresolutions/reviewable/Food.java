@@ -1,11 +1,11 @@
-package com.visionarysoftwaresolutions.reviewable.stubs;
+package com.visionarysoftwaresolutions.reviewable;
 
 import com.visionarysoftwaresolutions.reviewable.Review;
 import com.visionarysoftwaresolutions.reviewable.Reviewable;
 import com.visionarysoftwaresolutions.reviewable.Reviewer;
 
-public class Food implements Reviewable {
-    private String name;
+class Food implements Reviewable {
+    private final String name;
     
     public Food(String string) {
         name = string;

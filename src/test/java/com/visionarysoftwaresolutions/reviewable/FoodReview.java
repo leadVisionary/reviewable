@@ -1,10 +1,10 @@
-package com.visionarysoftwaresolutions.reviewable.stubs;
+package com.visionarysoftwaresolutions.reviewable;
 
 import com.visionarysoftwaresolutions.reviewable.Review;
 import com.visionarysoftwaresolutions.reviewable.Reviewable;
 import com.visionarysoftwaresolutions.reviewable.Reviewer;
 
-public final class FoodReview implements Review {
+final class FoodReview implements Review {
     private final String description;
     private final Reviewer reviewer;
     private final Reviewable reviewed;
